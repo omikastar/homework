@@ -1,0 +1,8 @@
+//1.App的生命周期：点击程序图标、执行main函数、通过UIApplicationMain函数、初始化UIApplication对象并为其设置代理对象、UIApplication对象、程序结束退出
+
+//  ViewController的生命周期：alloc/init -> loadView -> viewDidLoad -> viewWillAppear -> viewDidAppear -> viewWillDisappear -> viewDidDisappear -> dealloc
+
+//2.常用的UI控件：   UIScrollView ; UITextView ; UITableView ; UIWebView ; WKWebView
+
+//3.UITableViewDelegate声明方法： 1.选中某行cell调用此方法  2.自定义每组头部的view需要使用到UITableViewHeaderFooterView 
+//                                3.自定义每组尾部的view需要使用到UITableViewHeaderFooterView
