@@ -5,6 +5,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Student ：NSObject
 
+@property (nonatomic,copy) NSString *name;
+
+@property (nonatomic,copy) NSString *major;
+
+@property (nonatomic,assign) NSUinteger age;
+
+-(void)study;
+
+-(float)time;
+-(void)setName:(float)time;
+
 @end
 
 NS_ASSUME_NONNULL_END
@@ -12,10 +23,34 @@ NS_ASSUME_NONNULL_END
 //Student.m
 #import"Student.h"
 @implementation Student
-
 { 
- NSString *_name;
- NSString *_major;
+ float _time;
+}
 
+-(float)time{
+ return_time;
+}
+-(void)setName:(float)time{
+ _time=time;
+}
 
+-(void)study{
+NSLog(@"study time(%@)",time);
+}
+@end
+
+//main.m
+#import <Foundation/Foundation.h>
+#import"Student.h"
+
+int main(int argc,const char * argv[]) {
+     @autoreleasepool{
+     Student *student1=[[Student alloc] init];
+       student1.name=@"LiHua";
+       student1.major=@"ComputerScience";
+       student1.age=21;
+       student1.time=2.0;
+       [student1 study];
+     }
+     return 0;
 }
