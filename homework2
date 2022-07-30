@@ -1,0 +1,21 @@
+//  Student.h
+#import<Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface Student ：NSObject
+
+@end
+
+NS_ASSUME_NONNULL_END
+
+//Student.m
+#import"Student.h"
+@implementation Student
+
+{ 
+ NSString *_name;
+ NSString *_major;
+
+
+}
