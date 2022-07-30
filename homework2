@@ -1,3 +1,4 @@
+//OC 
 //  Student.h
 #import<Foundation/Foundation.h>
 
@@ -54,3 +55,25 @@ int main(int argc,const char * argv[]) {
      }
      return 0;
 }
+
+
+//Swift
+class Student {
+ var name:String=""
+ var major:String?
+ var age:Int?
+ var time:Float?
+  init(name:String,major:String,age:Int,time:Float){
+   self.name=name
+   self.major=major
+   self.age=age
+   self.time=time
+    }
+    
+    func introduce(){
+    print("Study time \(time)")
+    }
+  }
+  
+  var student1= Student(name:"Lihua",major:"ComputerScience",age:21,time:2.0)
+  print(person1.time)
