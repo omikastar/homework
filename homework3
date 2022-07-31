@@ -35,40 +35,13 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 
 
+//Passenger.m
+#import"Passenger.h"
+@implementation Orders
 
-
-
-
-
-
-
-//Person.m
-#import"Person.h"
-@implementation Person
-{ 
- float _time;
-}
-
--(float)time{
- return_time;
-}
--(void)setName:(float)time{
- _time=time;
-}
-
--(void)study{
-NSLog(@"study time(%@)",time);
-}
 @end
 
-//main.m
-#import <UIKit/UIKit.h>
-#import"AppDelegate.h"
+@implementation Passenger
 
-int main(int argc,const char * argv[]) {
-     NSString*appDelegateClassName;
-     @autoreleasepool{
-     appDelegateClassName=NSStringFormClass([AppDelegate class]);
-     }
-     return UIApplicationMain(argc,argv,nil,appDelegateClassName);
-}
+@end
+
