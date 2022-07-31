@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Passenger ：Person
 
-@property (nonatomic,readonly) Bool adult;
+@property (nonatomic,readonly,assign) Bool adult;
 @property (nonatomic,strong) NSMutableArray *PastOrdors;
 @property (nonatomic,strong) NSMutableArray *UntravelledOrders;
 
@@ -49,27 +49,34 @@ NS_ASSUME_NONNULL_END
 
 -(void)AddOrigin:(Address*)_Origin
 {
-  Origin=_Origin
+  Origin=_Origin;
 }
 
 -(void)AddDestination:(Address*)_Destination
 {
-  Destination=_Destination
+  Destination=_Destination;
 }
 
 @end
 
 @implementation Passenger
 
+-(BOOL) adult {
+if (Person.age>=18)
+return YES ;
+else 
+ return NO ;
+ }
+
 -(void)BookTicket:(Orders*)Order
 {
-[UntravelledOrders addObject :Order]
+[UntravelledOrders addObject :Order];
 }
 
 -(void)CheckTicket:(Orders*)Order
 {
-[UntravelledOrders removeObject :Order]
-[PastOrdors addObject :Order]
+[UntravelledOrders removeObject :Order];
+[PastOrdors addObject :Order];
 }
 
 
