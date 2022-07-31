@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) Address *Origin;
 @property (nonatomic,strong) Address *Destination;
 
+-(void)AddOrigin:(Address*)_Origin;
+
+-(void)AddDestination:(Address*)_Destination;
 
 @end
 
@@ -30,9 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSMutableArray *PastOrdors;
 @property (nonatomic,strong) NSMutableArray *UntravelledOrders;
 
--(void)BookTicket;
+-(void)BookTicket:(Orders*)Order;
 
--(void)CheckTicket;
+-(void)CheckTicket:(Orders*)Order;
 
 @end
 
@@ -44,16 +47,14 @@ NS_ASSUME_NONNULL_END
 #import"Passenger.h"
 @implementation Orders
 
--(void)AddOrigin:(Address*)_Origin;
--(void)BookTicket:(Orders*)Order
+-(void)AddOrigin:(Address*)_Origin
 {
-[UntravelledOrders addObject :Order]
+  Origin=_Origin
 }
 
--(void)AddDestination:(Address*)_Destination;
--(void)BookTicket:(Orders*)Order
+-(void)AddDestination:(Address*)_Destination
 {
-[UntravelledOrders addObject :Order]
+  Destination=_Destination
 }
 
 @end
