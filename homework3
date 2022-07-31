@@ -40,16 +40,39 @@ NS_ASSUME_NONNULL_END
 
 
 //Passenger.m
+
 #import"Passenger.h"
 @implementation Orders
+
+-(void)AddOrigin:(Address*)_Origin;
+-(void)BookTicket:(Orders*)Order
+{
+[UntravelledOrders addObject :Order]
+}
+
+-(void)AddDestination:(Address*)_Destination;
+-(void)BookTicket:(Orders*)Order
+{
+[UntravelledOrders addObject :Order]
+}
 
 @end
 
 @implementation Passenger
 
--(void)BookTicket;
+-(void)BookTicket:(Orders*)Order
+{
+[UntravelledOrders addObject :Order]
+}
 
--(void)CheckTicket;
+-(void)CheckTicket:(Orders*)Order
+{
+[UntravelledOrders removeObject :Order]
+[PastOrdors addObject :Order]
+}
+
+
 
 @end
+
 
