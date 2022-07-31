@@ -1,1 +1,53 @@
 
+Person.h
+#import<Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface Person ：NSObject
+
+@property (nonatomic,copy) NSString *name;
+
+@property (nonatomic,copy) NSString *major;
+
+@property (nonatomic,assign) NSUinteger age;
+
+-(void)study;
+
+-(float)time;
+-(void)setName:(float)time;
+
+@end
+
+NS_ASSUME_NONNULL_END
+
+//Person.m
+#import"Person.h"
+@implementation Person
+{ 
+ float _time;
+}
+
+-(float)time{
+ return_time;
+}
+-(void)setName:(float)time{
+ _time=time;
+}
+
+-(void)study{
+NSLog(@"study time(%@)",time);
+}
+@end
+
+//main.m
+#import <UIKit/UIKit.h>
+#import"AppDelegate.h"
+
+int main(int argc,const char * argv[]) {
+     NSString*appDelegateClassName;
+     @autoreleasepool{
+     appDelegateClassName=NSStringFormClass([AppDelegate class]);
+     }
+     return UIApplicationMain(argc,argv,nil,appDelegateClassName);
+}
